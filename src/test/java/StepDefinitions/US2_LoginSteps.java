@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class US1_LoginSteps {
+public class US2_LoginSteps {
     LeftNav ln = new LeftNav();
     @When("Navigate to Website")
     public void navigateToWebsite() {
