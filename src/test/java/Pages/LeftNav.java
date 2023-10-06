@@ -21,4 +21,7 @@ public class LeftNav extends Parent {
     @FindBy(css = "[id='rightPanel'] h1")
     public WebElement error;
 
+    @FindBy(linkText = "Register")
+    public WebElement register;
+
 }
