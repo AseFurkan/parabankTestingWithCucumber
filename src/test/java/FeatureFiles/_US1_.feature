@@ -1,4 +1,4 @@
-Feature:
+Feature:Registration
 
   @Accounts @Smoke @Regression
   Scenario: Register
