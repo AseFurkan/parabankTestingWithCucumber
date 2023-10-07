@@ -18,6 +18,8 @@ public class CenterPage extends Parent{
     public WebElement registerBtn;
     @FindBy(id = "rightPanel")
     public WebElement successful;
+    @FindBy(css = "[value='Update Profile']")
+    public WebElement UpdateProfileBtn;
 
     public void actions(String data){
         Actions TABactions = new Actions(GWD.getDriver());
