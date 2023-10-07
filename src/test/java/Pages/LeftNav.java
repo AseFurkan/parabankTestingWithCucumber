@@ -22,6 +22,8 @@ public class LeftNav extends Parent {
     public WebElement error;
     @FindBy(linkText = "Register")
     public WebElement register;
+    @FindBy(linkText = "Update Contact Info")
+    public WebElement updateContactInfo;
 
 
 }

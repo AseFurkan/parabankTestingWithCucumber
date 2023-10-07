@@ -7,5 +7,5 @@ Feature:
 
   @Contact @Regression
   Scenario: Update Contact Information
-    Then
-    And
+    When Navigate to Update Profile
+    Then Update registration information
