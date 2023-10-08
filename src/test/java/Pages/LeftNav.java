@@ -20,5 +20,8 @@ public class LeftNav extends Parent {
     public WebElement logOut;
     @FindBy(css = "[id='rightPanel'] h1")
     public WebElement error;
+    @FindBy(linkText = "Register")
+    public WebElement register;
+
 
 }

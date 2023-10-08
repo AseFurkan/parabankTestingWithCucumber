@@ -11,7 +11,7 @@ public class US2_LoginSteps {
     LeftNav ln = new LeftNav();
     @When("Navigate to Website")
     public void navigateToWebsite() {
-        GWD.getDriver().get("https://para.testar.org/");
+        GWD.getDriver().get("https://parabank.parasoft.com/parabank/index.htm");
 
     }
     @Then("Enter username and password and click login button")
