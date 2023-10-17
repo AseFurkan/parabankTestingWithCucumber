@@ -9,13 +9,13 @@ Feature: Updating Contact Information
   Scenario: Update Contact Information
     When Navigate to Update Profile
     Then Update registration information
-    And  Updates have been added to the system
     And  Error message
-    And   Clik to logout
-    And   User should logout successfully
+    And  Fix the error and update profile again
+    And  Updates have been added to the system
+    And  Clik to logout
+    And  User should logout successfully
 
-  @Contact @Regression
-  Scenario: login with positive action
-    Then Enter username and password and click login button
+    And Enter username and password and click login button
     And  User should login successfully
+    And Navigate to Update Profile
     And  View current changes

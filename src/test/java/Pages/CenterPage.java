@@ -20,10 +20,17 @@ public class CenterPage extends Parent{
     public WebElement successful;
     @FindBy(css = "[value='Update Profile']")
     public WebElement UpdateProfileBtn;
+    @FindBy(xpath = "//div[@class='ng-scope']")
+    public WebElement ProfileUpdated;
+    @FindBy(xpath = "//*[ contains( text(), 'is required.' )  ]")
+    public WebElement errorMessage;
+    @FindBy(css = "[id='customer.lastName']")
+    public WebElement updated;
 
-    public void actions(String data){
+    public Actions pressTab(){
         Actions TABactions = new Actions(GWD.getDriver());
-        TABactions.sendKeys(Keys.TAB).sendKeys(data).build().perform();
+        Actions pressTAB=TABactions.sendKeys(Keys.TAB);
+        return pressTAB;
     }
 
 
