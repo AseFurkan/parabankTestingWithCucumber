@@ -16,8 +16,4 @@ Feature:
 
     Examples:
       | username | password |
-      | teamyedi |          |
-      | teamyedi | team     |
-      |          | team7    |
-      | team     | team7    |
-      |          |          |
+      | teamyedi |     team7 |

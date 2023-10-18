@@ -4,8 +4,6 @@ import Pages.CenterPage;
 import Pages.LeftNav;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.Keys;
-import org.testng.Assert;
 
 public class US1_Register {
     LeftNav ln = new LeftNav();
@@ -15,22 +13,23 @@ public class US1_Register {
     public void completeTheRegistrationProcess() {
         ln.myClick(ln.register);
         cp.firstName.sendKeys("team");
-        cp.actions("yedi");
-        cp.actions("address_1");
-        cp.actions("city_1");
-        cp.actions("state_1");
-        cp.actions("71");
-        cp.actions("1234567");
-        cp.actions("7");
-        cp.actions("teamyedi");
-        cp.actions("team7");
-        cp.actions("team7");
+        cp.pressTab().sendKeys("yedi").build().perform();
+        cp.pressTab().sendKeys("address_1").build().perform();
+        cp.pressTab().sendKeys("city_1").build().perform();
+        cp.pressTab().sendKeys("state_1").build().perform();
+        cp.pressTab().sendKeys("71").build().perform();
+        cp.pressTab().sendKeys("1234567").build().perform();
+        cp.pressTab().sendKeys("7").build().perform();
+        cp.pressTab().sendKeys("teamyedi").build().perform();
+        cp.pressTab().sendKeys("team7").build().perform();
+        cp.pressTab().sendKeys("team7").build().perform();
         cp.myClick(cp.registerBtn);
 
     }
 
     @And("User should register successfully")
     public void userShouldRegisterSuccessfully() {
-        Assert.assertTrue(cp.successful.getText().contains("successful"),"Kayıt yapılamadı");
+        //Assert.assertTrue(cp.successful.getText().contains("successful"),"Kayıt yapılamadı");
+        cp.verifyContainsText(cp.successful,"successful");
     }
 }
